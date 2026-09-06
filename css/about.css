@@ -1,0 +1,223 @@
+
+
+            *{
+            text-align: center;
+            font-family: Qilka;
+            }
+
+            div{
+            text-align: center;
+            }
+
+            body{
+            background-image: url("images/Bg.jpg");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            }
+
+            h2{
+            margin: 0;
+            }
+            /* Remove margin on text boxes */
+
+            #text{
+            margin-top: 3%;
+            background-color: rgba(0, 255, 255, 0);
+            width: 80%;
+            align-self: center;
+            text-align: center;
+            }
+
+            a{
+            color:rgb(220, 187, 207);
+            }
+
+            a:visited{
+            color:rgb(245, 201, 227);
+            }
+
+            a:hover{
+            color: rgb(237, 185, 215);
+            }
+
+         @font-face {
+            font-family: Qilka;
+            src: url(Qilka.woff2);
+            }
+
+          .site-header{
+            margin-top: -2%;
+            margin-left: 0;
+            width: 100vw;
+            height: 10vh;
+            background-color: rgba(0, 0, 0, 0);
+            background-image: url("images/56b841e8.png");
+            background-size: contain;
+
+          }
+
+        /* Holds all divs*/
+          .root-box{
+            position: relative;
+            height: 90vh;
+            width: 100vw;
+            display: flex;
+            margin: auto;
+            margin-top: 0%;
+            background-color: rgba(0, 0, 0, 0);
+            flex-direction: column;
+            }
+
+        /* Header and navigation div*/
+          .Introduction{
+            background-color: #ffffff;
+            color:rgb(95, 61, 75);
+            font-size: 100%;
+            overflow:hidden;
+            margin: auto;
+            margin-top: 2%;
+            color: rgb(95, 61, 75);
+            border-width: 10%;
+            border-style: dashed;
+            border-color: rgb(244, 213, 242);
+            width: 30vw;
+            height: 15vh;
+            }
+
+        /* Holds all divs in project display box*/
+         .projects{
+            background-color: rgb(255, 247, 252);
+            font-size: 0.5vw;
+            color:rgb(95, 61, 75);
+            height: 60vh;
+            margin: auto;
+            width: 45%;
+            border-style: dashed;
+            border-width: 4px;
+            border-color:  rgb(244, 213, 242);
+            overflow: hidden;
+            }
+
+         .projects-header{
+            width: 100%;
+            height: 10%;
+            margin: 0;
+            font-size: 200%;
+            background-color: rgb(255, 247, 252);
+            padding-top: 4%;
+            display: flex;
+            flex-direction: row;
+            }
+
+         #header{
+            margin-left: 0%;
+            margin-top: -2%;
+            width: 15%;
+            height: 120%;
+         }
+
+         .project-name-space{
+            background-color: rgb(255, 255, 255);
+            overflow: scroll;
+            height: 90%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            font-size: 150%;
+            -webkit-text-stroke: #ffffff 0.1px;
+            text-align: center;
+            }
+
+        /* Tablet */
+        @media (max-width:1080px){
+
+            body{
+            background-size: contain;
+            }
+
+            .Introduction{
+            width: 50%;
+            font-size: 130%;
+            height: 15%;
+            margin: auto;
+            margin-top: 5%;
+            overflow: hidden;
+            }
+
+            .projects{
+            width: 80%;
+            height: 50%;
+            margin: auto;
+            margin-top: 5%;
+            margin-bottom: 30%;
+            font-size: 50%;
+            background-color: rgb(255, 247, 252);
+            }
+
+            .project-name-space{
+            background-color: rgb(255, 255, 255);
+            overflow: scroll;
+            height: 84%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            }
+
+        }
+
+        /* Phone */
+        @media (max-width:660px){
+
+            body{
+            background-size: contain;
+            }
+
+            .site-header{
+            margin-top: -10%;
+            margin-left: 0;
+            width: 100vw;
+            height: 10vh;
+            background-color: rgba(0, 0, 0, 0);
+            background-image: url("images/56b841e8.png");
+            background-size: contain;
+
+          }
+
+            .root-box{
+            height: 100vh;
+            width: 100vw;
+            font-size: 150%;
+            display: flex;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0);
+            }
+
+            .Introduction{
+            width: 90%;
+            font-size: 75%;
+            height: 15%;
+            margin-left: 4%;
+            margin-top: 4%;
+            }
+
+            .projects{
+            width: 90%;
+            height: 50%;
+            margin-left: 4%;
+            margin-top: 5%;
+            margin-bottom: 40%;
+            font-size: 30%;
+            background-color: rgb(255, 247, 252);
+            }
+
+             .project-name-space{
+            background-color: rgb(255, 255, 255);
+            overflow: scroll;
+            height: calc(100% - 57.896px);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            }
+
+        }

@@ -1,0 +1,513 @@
+
+
+        * {text-align: center; font-family: Qilka;}
+
+        div {text-align: center;}
+
+
+            body {
+            background-image: url("images/Bg.jpg");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+         @font-face {
+            font-family: Qilka;
+            src: url(Qilka.woff2);
+        }
+
+        /* Header animation*/
+
+        @keyframes bounce {
+            from {top:0px;}
+            to {top: 10px;}
+        }
+
+        .bounce-element {
+        position: relative;
+        animation: bounce 0.8s infinite;
+        animation-direction: alternate ;
+        }
+
+         @keyframes LI-link-bounce {
+            from {bottom:0%;}
+            to {bottom: 2%;}
+        }
+
+        .LI-link-bounce{
+        position: absolute;
+        left: 30%;
+        animation: LI-link-bounce 0.5s infinite;
+        animation-direction: alternate ;
+}
+
+
+        @keyframes git-link-bounce {
+                    from {bottom:0%;}
+                    to {bottom: 2%;}
+                }
+
+        .git-link-bounce{
+        position: absolute;
+        animation: git-link-bounce 0.5s infinite;
+        animation-direction: alternate ;
+}
+
+        .header {
+            width: auto;
+            height: 1rem;
+            display: flex;
+
+        }
+
+        /* Header animation*/
+
+        .container {
+            position: relative;
+            text-align: center;
+            align-items: center;
+        }
+
+         /* Main page title text position ONLY*/
+
+
+         #title{
+            float: center; width: 20vw; height: 15%;
+         }
+
+         .title-overlay{
+            background-color: rgba(235, 115, 115, 0);
+            width: 15%;
+            height: 50%;
+            position: absolute;
+            top: 15%;
+            left: 43%;
+         }
+
+         .title-header-overlay{
+            background-color: rgba(135, 36, 255, 0);
+            width: 100%;
+            height: 20%;
+            position: absolute;
+            bottom: 55%;
+         }
+
+         .upper-title-overlay{
+            background-color: rgba(8, 173, 49, 0);
+            width: 120%;
+            height: 50%;
+            position: absolute;
+            left: -10%;
+         }
+
+        .title-text{
+              font-size: 0.75vw;
+              -webkit-text-fill-color: white;
+              font-family: Qilka;
+              -webkit-text-stroke: 0.1vw rgb(241, 163, 202);
+        }
+
+        .title-header-text{
+            font-family: Qilka;
+            -webkit-text-fill-color: rgb(241, 163, 202);
+            -webkit-text-stroke: 0.059vw white;
+            font-size: 1.2vw;
+            width: 90%;
+        }
+        /* Main page title text position ONLY*/
+
+
+
+        /* Sections of display*/
+        .root-box{
+            position: relative;
+            height: 75vh;
+            width: 70vw;
+            display: flex;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .projects{
+            background-color: rgb(255, 247, 252);
+            overflow: hidden;
+            font-size: 0.5vw;
+            color:rgb(95, 61, 75);
+            word-wrap: break-word;
+            overflow-wrap:break-word;
+            height: 70vh;
+            width: 50%;
+            border-style: dashed;
+            border-width: 4px;
+            border-color:  rgb(244, 213, 242);
+            margin-left: 33.5vw;
+            margin-top: 2.1vh;
+        }
+
+        .Introduction{
+            background-color: #ffffff;
+            color:rgb(95, 61, 75);
+            font-size: 60%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;           
+            overflow:scroll;
+            border-width: 10%;
+            border-style: dashed;
+            border-color: rgb(244, 213, 242);
+            width: 31.5vw;
+            height: 25vh;
+            position: absolute;
+            top: 3%;
+            left: 1%;
+
+        }
+
+
+
+        .navigation{
+            background-color: rgb(255, 247, 252);
+            color:rgb(95, 61, 75);
+            word-wrap: break-word;
+            overflow-wrap:break-word;
+            height: 56.5%;
+            width: 45%;
+            border-style: dashed;
+            border-width: 10%;
+            border-color:  rgb(244, 213, 242);
+            position: absolute;
+            top: 40%;
+            left: 1%;
+            display: flex;
+            flex-direction: column;
+            overflow: v;
+        }
+        /* Sections of display*/
+
+        /* Project display columns*/
+
+        .scroll-projects{
+
+            width: 100%;
+            height: 100%;
+            overflow: scroll;
+        }
+
+        .project-name-space{
+            background-color: rgb(255, 255, 255);
+            overflow: hidden;
+            word-wrap: break-word;
+            overflow-wrap:break-word;
+            height: 100%;
+            width: 49.5%;
+            display: flex;
+            flex-direction: column;
+            float: left;
+        }
+
+        .project-name{
+            background-color: rgba(178, 12, 12, 0);
+            overflow: hidden;
+            font-size: 0.4vw;
+            text-align: center;
+            word-wrap: break-word;
+            overflow-wrap:break-word;
+            height: 7%;
+            width: 100%;
+            margin-bottom: 15%;
+
+        }
+
+        .project-desc-space{
+            background-color: rgb(255, 255, 255);
+            overflow: hidden;
+            word-wrap: break-word;
+            overflow-wrap:break-word;
+            height: 100vh;
+            width: 49.5%;
+            display: flex;
+            flex-direction: column;
+            float: right;
+        }
+
+        .project-desc{
+            background-color: rgba(74, 142, 28, 0);
+            overflow: hidden;
+            font-size: 0.4vw;
+            word-wrap: break-word;
+            overflow-wrap:break-word;
+            height: 10.5%;
+            width: 100%;
+            margin-bottom: 1%;
+
+        }
+        /* Project display columns*/
+
+         /* Nav display columns*/
+
+         .relative{
+            position: relative;
+         }
+
+         .navtext{
+            background-color: rgba(0, 255, 255, 0);
+            margin-top: -1vw;
+            height: 30%;
+         }
+
+
+         .about-me{
+
+            background-color: rgb(255, 255, 255);
+            height:  60%;
+            width: 100%;
+            font-size:60%;
+            overflow: scroll;
+         }
+
+         #git{
+             width: 24px; 
+             height: auto;
+              background-color:rgba(137, 43, 226, 0);
+         }
+
+         #linkedin{
+             width: 30px; 
+             height: auto;
+              background-color:rgba(0, 0, 255, 0);
+         }
+
+         #navlinks{
+            font-size: 100%;
+            background-color: rgba(118, 100, 77, 0);
+            width: 100%;
+            height: 2%;
+            margin-top: 3%;
+         }
+
+         #aboutme{
+            font-size: 100%;
+            background-color: rgba(63, 177, 139, 0);
+            width: 100%;
+            height: 2%;
+            margin-top: 10%;
+        }
+
+         .bottom-nav{
+            display: flex; 
+            width: 100%; 
+            height: 20%; 
+            background-color:  rgba(138, 88, 184, 0);
+            margin-top: auto;
+         }
+
+         .gitlink{
+
+            width: 3vw;
+            background-color: rgba(106, 223, 255, 0);
+            position: relative;
+            margin-bottom: 0;
+            left: 1vw;
+
+         }
+
+         .LIlink{
+
+            width: 24%;
+            position: absolute;
+            left: 25%;
+            bottom: 0vh;
+            background-color: rgba(95, 255, 202, 0);
+         }
+
+          /* Nav display columns*/
+
+        ul li::marker {
+            content: "♥";
+            font-size: 2.3em;
+        }
+
+        a{
+            color:rgb(220, 187, 207);
+        }
+
+        a:visited{
+            color:rgb(245, 201, 227);
+        }
+
+        a:hover{
+            color: rgb(237, 185, 215);
+        }
+
+
+                                
+        @media (max-width:750px){
+
+            #title{
+            float: center; width: 35vw; height: 20%;
+         }
+
+         body {
+            background-image: url("images/Bg.jpg");
+            background-size: contain;
+            margin: 0;
+            padding: 0;
+        }
+
+         .title-overlay{
+            background-color: rgba(226, 0, 0, 0);
+            width: 20%;
+            height: 90%;
+            position: absolute;
+            top: 15%;
+            left: 41%;
+         }
+
+         .upper-title-overlay{
+            background-color: rgba(8, 173, 49, 0);
+            width: 120%;
+            height: 50%;
+            left: -18%;
+         }
+
+         .title-header-overlay{
+            bottom: 65%;
+            left: -5%;
+         }
+
+         .title-text{
+              font-size: 1.4vw;
+              width: 120%;
+        }
+
+        .title-header-text{
+            font-size: 2.2vw;
+            width: 110%;
+
+        }
+
+            .root-box{
+            height: 88vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            overflow: hidden;
+            background-color: rgba(46, 255, 255, 0);
+            }
+
+            .Introduction{
+            width: 90%;
+            font-size: 45%;
+            height: 20%;
+            margin-left: 4%;
+            margin-top: 4%;
+            position: relative;
+            top: 0;
+            left: 0;
+            }
+
+            .projects{
+            width: 90%;
+            height: 30%;
+            margin-left: 4%;
+            margin-top: 4%;
+            position: relative;
+            font-size: 20%;
+            top: 0;
+            left: 0;
+            }
+
+            .navigation{
+            width: 90%;
+            height: 30%;
+            margin-left: 4%;
+            margin-top: 4%;
+            position: relative;
+            top: 0;
+            left: 0;
+            }
+
+            .about-me{
+
+            background-color: rgb(255, 255, 255);
+            height:  40%;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            overflow-wrap:break-word;
+            font-size: 40%;
+            overflow: scroll;
+         }
+         
+         .navtext{
+            background-color: rgba(0, 255, 255, 0);
+            margin-top: -1vw;
+            display: flex;
+            flex-direction: column;
+            height: 25%;
+            margin-bottom: 0.5%;
+            background-color: rgba(0, 255, 255, 0);
+            flex-direction: column;
+         }
+
+         #navlinks{
+            font-size: 50%;
+            background-color: rgba(121, 69, 0, 0);
+            width: 100%;
+            height: 2%;
+         }
+
+         #aboutme{
+            font-size: 70%;
+            background-color: rgba(63, 177, 139, 0);
+            width: 100%;
+            height: 2%;
+            margin-bottom: 1%;
+            margin-top: 0;
+         }
+
+         
+
+         #git{
+             width: 14px; 
+             height: auto;
+         }
+
+        .LI-link-bounce{
+        margin-left: 5%;
+        }
+
+         #linkedin{
+             width: 20px; 
+             height: auto;
+         }
+
+         .project-name{
+            background-color: rgba(178, 12, 12, 0);
+            overflow: hidden;
+            font-size: 120%;
+            text-align: center;
+            word-wrap: break-word;
+            overflow-wrap:break-word;
+            height: 15%;
+            width: 100%;
+            margin-bottom: 15%;
+            background-color: rgba(0, 255, 255, 0);
+
+        }
+
+
+         .project-desc{
+            background-color: rgba(74, 142, 28, 0);
+            overflow: hidden;
+            font-size: 125%;
+            word-wrap: break-word;
+            overflow-wrap:break-word;
+            height: 10.5%;
+            width: 100%;
+            margin-bottom: 1%;
+
+        }
+
+        }

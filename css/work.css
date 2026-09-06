@@ -1,0 +1,176 @@
+
+            *{
+            text-align: center;
+            font-family: Qilka;
+            }
+
+            div{
+            text-align: center;
+            }
+
+            body {
+            background-image: url("images/Bg.jpg");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            }
+
+            a{
+            color:rgb(220, 187, 207);
+            }
+
+            a:visited{
+            color:rgb(245, 201, 227);
+            }
+
+            a:hover{
+            color: rgb(237, 185, 215);
+            }
+
+            @font-face {
+            font-family: Qilka;
+            src: url(Qilka.woff2);
+            }
+
+
+        /* Main page title text position ONLY*/
+
+
+
+        /* Sections of display*/
+        .root-box{
+            position: relative;
+            height: 90vh;
+            width: 70vw;
+            display: flex;
+            margin: auto;
+            margin-top: 1%;
+            background-color: rgba(0, 255, 255, 0);
+            flex-direction: column;
+            }
+
+        .projects{
+            background-color: rgb(255, 247, 252);
+            font-size: 0.5vw;
+            color:rgb(95, 61, 75);
+            height: 60vh;
+            margin: auto;
+            margin-bottom: 1%;
+            width: 50%;
+            border-style: dashed;
+            border-width: 4px;
+            border-color:  rgb(244, 213, 242);
+            }
+
+        .Introduction{
+            background-color: #ffffff;
+            color:rgb(95, 61, 75);
+            font-size: 150%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            overflow:hidden;
+            margin: auto;
+            margin-top: 1%;
+            color: rgb(95, 61, 75);
+            border-width: 10%;
+            border-style: dashed;
+            border-color: rgb(244, 213, 242);
+            width: 40vw;
+            height: 20vh;
+            }
+        /* Sections of display*/
+
+        /* Project display columns*/
+
+        .project-name-space{
+            background-color: rgb(255, 255, 255);
+            word-wrap: break-word;
+            overflow-wrap:break-word;
+            overflow: scroll;
+            height: 85%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            }
+
+        /* Tablet */
+        @media (max-width:1080px){
+
+            body{
+                background-size: contain;
+            }
+
+            .Introduction{
+            width: 100%;
+            font-size: 150%;
+            height: 15%;
+            margin: auto;
+            overflow: hidden;
+            }
+
+            .projects{
+            width: 100%;
+            height: 50%;
+            margin: auto;
+            margin-top: 5%;
+            margin-bottom: 30%;
+            font-size: 50%;
+            background-color: rgb(255, 247, 252);
+            }
+
+            .project-name-space{
+            background-color: rgb(255, 255, 255);
+            overflow: scroll;
+            height: calc(100% - 65.896px);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            }
+
+        }
+
+        /* Phone */
+        @media (max-width:660px){
+
+            body{
+                background-size: contain;
+            }
+
+            .root-box{
+            height: 100vh;
+            width: 100vw;
+            font-size: 150%;
+            display: flex;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0);
+            }
+
+            .Introduction{
+            width: 90%;
+            font-size: 60%;
+            height: 15%;
+            margin-left: 4%;
+            margin-top: 4%;
+            }
+
+            .projects{
+            width: 90%;
+            height: 50%;
+            margin-left: 4%;
+            margin-top: 5%;
+            margin-bottom: 40%;
+            font-size: 30%;
+            background-color: rgb(255, 247, 252);
+            }
+
+             .project-name-space{
+            background-color: rgb(255, 255, 255);
+            overflow: scroll;
+            height: calc(100% - 57.896px);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            }
+
+
+        }

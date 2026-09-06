@@ -1,0 +1,475 @@
+body{
+
+    margin: 0;
+    padding: 0;
+}
+
+ @font-face {
+    font-family: Qilka;
+    src: url(Qilka.woff2);
+}
+
+
+* { font-family: Qilka;}
+
+
+.background{
+
+    background-color: rgb(255, 255, 255);
+    background-image: url("images/journalbg.jpg");
+    background-size: contain;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header {
+   width: auto;
+   height: 1rem;
+   display: flex;
+}
+
+
+.book-space{
+
+    background-color:rgba(0, 0, 0, 0);
+    height: 70%;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+}
+
+.book{
+    height: 50vw;
+    width: 20vw;
+    position: fixed;
+    background-color: rgba(245, 245, 220, 0);
+    left: -5vw;
+    bottom: -30%;
+}
+
+.notebook{
+    height: 50vw;
+    width: 52vw;
+    background-image: url("images/notebook.png");
+    background-size: cover;
+}
+
+.page{
+    background-color:rgba(139, 22, 163, 0);
+    background-size: contain;
+    height: 60%;
+    width: 33vw;
+    position: absolute;
+    left: 50%;
+    top: 10.6%;
+    overflow: scroll;
+    text-align: center;
+    font-size: 1.4vw;
+    color: rgb(95, 61, 75);
+}
+
+.nav-bar-space{
+
+    width: 15vw;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+
+}
+
+#cream{height: 130vh;
+     width: 5vw;
+      position: fixed;
+       right: -3vw;
+        top: -10vw;
+    }
+
+.behindbar{
+
+    width: 18vw;
+    height: 100vh;
+    background-color: rgba(70, 0, 0, 0);
+    background-image: url("images/pixelheader.png");
+    background-position: contain;
+    position: fixed;
+    display: flex;
+    right: 1%;
+}
+
+.navborder{
+
+    height: 100%;
+    background-color: rgba(222, 13, 13, 0);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 13.5%;
+}
+
+
+.underheader{
+
+    width: 500%;
+    height: 9%;
+    background-color: rgba(142, 255, 29, 0);
+    background-image: url("images/3layerpolka.gif");
+    background-size: contain;
+    background-repeat: repeat-x;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.hdr{
+    margin: 0;
+    height: 20%;
+    width: 100%;
+    background-color: rgba(29, 112, 255, 0);
+    background-image: url("images/polka.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.port{
+
+    width: 9%;
+    height: 35%;
+    background-color: rgba(177, 0, 0, 0);
+    position: fixed;
+    align-items: center;
+    right: 4%;
+    top: 5%;
+}
+
+.work{
+
+    width: 9%;
+    height: 35%;
+    background-color: rgba(177, 0, 0, 0);
+    position: fixed;
+    align-items: center;
+    right: 4%;
+    top: 55%;
+}
+
+a{
+    color:rgb(95, 61, 75);
+}
+
+a:visited{
+    color:rgb(95, 61, 75);
+}
+
+a:hover{
+    color: rgb(237, 185, 215);
+}
+
+
+.nav-icons{
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.7vw;
+}
+
+@keyframes bounce {
+    from {top:0px;}
+    to {top: 5px;}
+}
+
+.bounce-element {
+    position: relative;
+    animation: bounce 0.5s infinite;
+    animation-direction: alternate ;
+}
+
+.middle-header{
+
+    background-color: rgba(2, 2, 122, 0);
+    width: 70px;
+    height: 68px;
+    position: absolute;
+    left: 45%;
+}
+
+.journaldeco{
+    width: 100%;
+    height: 50%;
+    background-color: rgba(1, 115, 14, 0);
+    position: absolute;
+    left: 105%;
+    top: 5%;}
+
+    .pageribbon{
+    width: 70%;
+    height: auto;
+    background-color: rgba(11, 82, 117, 0);
+    position: absolute;
+    left: 180%;
+    top: -2%;}
+
+    .pageheader{
+    width: 100%;
+    height: 2.9%;
+    background-color: rgba(11, 82, 117, 0);
+    position: absolute;
+    font-size: 0.92vw;
+    color:rgb(235, 181, 193);
+    left: 122.5%;
+    top: 6.5%;
+}
+
+@media (max-width: 1500px){
+
+.notebook{
+    height: 100vw;
+    width: 87vw;
+    background-image: url("images/notebook.png");
+    background-size: cover;
+}
+
+.book{
+    height: 50vw;
+    width: 20vw;
+    position: fixed;
+    background-color: rgba(245, 245, 220, 0);
+    left: -10vw;
+    bottom: 0%;
+}
+
+.journaldeco{
+    width: 145%;
+    height: 50%;
+    background-color: rgba(1, 115, 14, 0);
+    position: absolute;
+    left: 175%;
+    top: 7%;}
+
+    .pageribbon{
+    width: 90%;
+    height: auto;
+    background-color: rgba(11, 82, 117, 0);
+    position: absolute;
+    left: 300%;
+    top: -1%;}
+
+.pageheader{
+    width: 100%;
+    height: 2.9%;
+    background-color: rgba(11, 82, 117, 0);
+    position: absolute;
+    font-size: 1.4vw;
+    color:rgb(235, 181, 193);
+    left: 200%;
+    top: 9.2%;
+}
+
+.page{
+    background-color:rgba(139, 22, 163, 0);
+    background-size: contain;
+    height: 100%;
+    width: 53vw;
+    position: absolute;
+    left: 90%;
+    top: 17%;
+    overflow: scroll;
+    text-align: center;
+    font-size: 1.4vw;
+    color: rgb(95, 61, 75);
+}
+
+}
+
+@media (max-width: 800px) {
+
+.notebook{
+    height: 100vw;
+    width: 87vw;
+    background-image: url("images/notebook.png");
+    background-size: cover;
+}
+
+.book{
+    height: 50vw;
+    width: 20vw;
+    position: fixed;
+    background-color: rgba(245, 245, 220, 0);
+    left: -10vw;
+    bottom: 45%;
+}
+
+.journaldeco{
+    width: 145%;
+    height: 50%;
+    background-color: rgba(1, 115, 14, 0);
+    position: absolute;
+    left: 175%;
+    top: 7%;}
+
+     .pageribbon{
+    width: 90%;
+    height: auto;
+    background-color: rgba(11, 82, 117, 0);
+    position: absolute;
+    left: 300%;
+    top: -1%;}
+
+.pageheader{
+    width: 100%;
+    height: 2.9%;
+    background-color: rgba(11, 82, 117, 0);
+    position: absolute;
+    font-size: 1.4vw;
+    color:rgb(235, 181, 193);
+    left: 200%;
+    top: 9.5%;
+}
+
+.page{
+    background-color:rgba(139, 22, 163, 0);
+    background-size: contain;
+    height: 160%;
+    width: 53vw;
+    position: absolute;
+    left: 90%;
+    top: 17%;
+    overflow: scroll;
+    text-align: center;
+    font-size: 1.4vw;
+    color: rgb(95, 61, 75);
+}
+
+
+
+}
+/*
+
+
+@media (max-width: 700px){
+
+
+.book{
+    height: 50vw;
+    width: 20vw;
+    position: fixed;
+    background-color: rgba(245, 245, 220, 0);
+    left: -5vw;
+    bottom: 0%;
+}
+
+}
+
+@media (max-width: 600px){
+
+.notebook{
+    height: 100vw;
+    width: 87vw;
+    background-image: url("images/notebook.png");
+    background-size: cover;
+}
+
+.book{
+    height: 50vw;
+    width: 20vw;
+    position: fixed;
+    background-color: rgba(245, 245, 220, 0);
+    left: -10vw;
+    bottom: 50%;
+}
+
+.journaldeco{
+    width: 145%;
+    height: 50%;
+    background-color: rgba(1, 115, 14, 0);
+    position: absolute;
+    left: 175%;
+    top: 7%;}
+
+.pageheader{
+    width: 100%;
+    height: 2.9%;
+    background-color: rgba(11, 82, 117, 0);
+    position: absolute;
+    font-size: 1.4vw;
+    color:rgb(235, 181, 193);
+    left: 205%;
+    top: 10%;
+}
+
+.page{
+    background-color:rgba(139, 22, 163, 0);
+    background-size: contain;
+    height: 160%;
+    width: 53vw;
+    position: absolute;
+    left: 90%;
+    top: 17%;
+    overflow: scroll;
+    text-align: center;
+    font-size: 1.4vw;
+    color: rgb(95, 61, 75);
+}
+}
+@media (max-width: 400px){
+
+.notebook{
+    height: 100vw;
+    width: 87vw;
+    background-image: url("images/notebook.png");
+    background-size: cover;
+}
+
+.book{
+    height: 50vw;
+    width: 20vw;
+    position: fixed;
+    background-color: rgba(245, 245, 220, 0);
+    left: -10vw;
+    bottom: 50%;
+}
+
+.journaldeco{
+    width: 145%;
+    height: 50%;
+    background-color: rgba(1, 115, 14, 0);
+    position: absolute;
+    left: 175%;
+    top: 7%;}
+
+.pageheader{
+    width: 100%;
+    height: 2.9%;
+    background-color: rgba(11, 82, 117, 0);
+    position: absolute;
+    font-size: 1.4vw;
+    color:rgb(235, 181, 193);
+    left: 205%;
+    top: 10%;
+}
+
+.page{
+    background-color:rgba(139, 22, 163, 0);
+    background-size: contain;
+    height: 160%;
+    width: 53vw;
+    position: absolute;
+    left: 90%;
+    top: 17%;
+    overflow: scroll;
+    text-align: center;
+    font-size: 1.4vw;
+    color: rgb(95, 61, 75);
+}
+
+}
+*/
