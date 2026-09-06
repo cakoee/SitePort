@@ -1,0 +1,176 @@
+:root{
+    --main-color: rgb(193, 201, 193);
+    --second-color: rgb(125, 134, 124);
+    --button-color: #cdd0ce;
+    --main-text-color: #000000;
+    --secondary-text-color: #f1ede3;
+    --border-color: #000000;
+    font-family: Verdana;
+}
+
+body{
+    background-color: var(--main-color);
+    color: var(--main-text-color);
+    margin: 0px;
+    padding: 0px;
+}
+.bigSections{
+    display: flex;
+    flex-direction: row;
+    height: calc(90vh);
+}
+.descContainer{
+    width: 45%;
+    padding-right: 1%;
+    padding-left:2%;
+    border-right : 5px solid var(--border-color);
+    background-color: var(--second-color);
+    color: var(--secondary-text-color);
+}
+.formContainer{
+    width: 52%;
+    justify-content: center;
+}
+.formContainer form{
+    width: 100%;
+}
+.descContainer, .formContainer{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+#errorMsg {
+    min-height: 1.2em;
+}
+
+#errorMsg.empty {
+    visibility: hidden;
+}
+
+.descContainer div{
+    display: flex;
+    flex-direction: column;
+}
+
+#signupForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#signupForm input{
+    margin: 10px;
+    padding: 7.5px;
+    width: 50%;
+}
+#specialRow{
+    display: flex;
+    flex-direction: row;
+}
+#specialRow div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+#specialRow div input{
+    display:flex;
+    width: 15vw;
+}
+.footerMobile{
+    display:none;
+}
+input{
+    border: 2px solid var(--second-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.footerNormal{
+        margin-top: auto;
+        width: 100vw;
+        height: calc(10vh - 5px);
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        background-color: color-mix(in srgb, var(--second-color), var(--main-color));
+        border-top: 5px solid var(--border-color);
+    }
+    .footerNormal a{
+        text-decoration: none;
+        color : var(--main-text-color);
+        display: block;
+        text-align: center;
+        padding: 10px 10px;
+        font-size: calc(2vh + 1px);
+        margin: 5px 0px;
+        background-color: var(--main-color);
+        border-radius:10px;
+        -webkit-border-radius:10px;
+        -moz-border-radius:10px;
+        -ms-border-radius:10px;
+        -o-border-radius:10px;
+        width: 130px;
+}
+@media (max-width: 550px){
+    #specialRow div input{
+    display:flex;
+    width: 20vw;
+}
+    .footerNormal{
+        display: none;
+    }
+    .bigSections{
+        flex-direction: column;
+        padding: 0px;
+        height: 100vh;
+    }
+    .descContainer, .formContainer{
+        width: calc(100vw - 16px);
+        padding: 0;
+        border: none;
+        text-align: center;
+        font-size: calc(2.5vw + 2.5px);
+    }
+    .descContainer{
+        padding: 0px 8px 5px 8px;
+        height: calc(120px + 12.5vh);
+        border-bottom: 5px solid var(--border-color);
+    }
+    .descContainer p{
+        margin-top: 0px;
+    }
+    .formContainer{
+        height: calc(150px + 32vh);
+        padding: 2px 8px;
+    }
+    .footerMobile{
+        margin-top: auto;
+        width: 100vw;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        background-color: var(--second-color);
+        border-top: 5px solid var(--border-color);
+    }
+    .footerMobile a{
+        text-decoration: none;
+        color : var(--main-text-color);
+        display: block;
+        padding: 7.5px 10px;
+        margin: 5px 0px;
+        background-color: var(--main-color);
+        border-radius:10px;
+        -webkit-border-radius:10px;
+        -moz-border-radius:10px;
+        -ms-border-radius:10px;
+        -o-border-radius:10px;
+        width: 90px;
+    }
+    form > *{
+        padding: 7.5px;
+        margin-top: 5px;
+    }
+}

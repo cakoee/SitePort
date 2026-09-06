@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Job Joint | Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <hr id="invis" />
+    <h1>Job Joint</h1>
+    <h3 id="subtext">Which type of user are you?</h3>
+    <div id="container">
+      <form id="applicantForm">
+        <h2 class="headerH2">Applicant Login</h2>
+        <h3 class="desc">For those who are looking to be hired</h3>
+        <div class="inputDiv">
+          <h2 class="inputSubtext">Username</h2>
+          <input id="usernameApplicant" required />
+          <h2 class="inputSubtext">Password</h2>
+          <input type="password" id="passwordApplicant" required />
+          <h2 id="invisTextApplicant">Username or password was incorrect</h2>
+          <input type="submit" value="Login" class="loginBtn" />
+        </div>
+        <h2 class="outerSubtext">
+          New user? <a href="userSignUp.php">Create account</a>
+        </h2>
+      </form>
+      <div id="vr"></div>
+      <form id="employerForm">
+        <h2 class="headerH2">Employer Login</h2>
+        <h3 class="desc">For those who are looking to hire</h3>
+        <div class="inputDiv">
+          <h2 class="inputSubtext">Username</h2>
+          <input id="usernameEmployer" required />
+          <h2 class="inputSubtext">Password</h2>
+          <input type="password" id="passwordEmployer" required />
+          <h2 id="invisTextEmployer">Username or password was incorrect</h2>
+          <input type="submit" value="Login" class="loginBtn" />
+        </div>
+        <h2 class="outerSubtext">
+          New user? <a href="companySignUp.html">Create account</a>
+        </h2>
+      </form>
+    </div>
+    <form id="redirectionForm" method="POST"></form>
+  </body>
+  <script src="./js/script.js"></script>
+</html>

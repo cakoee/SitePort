@@ -1,0 +1,62 @@
+body{
+    background-color: rgb(232, 254, 255);
+}
+
+.title{
+    color: rgb(138, 199, 240);
+    width:100%;
+    font-size: 50px;
+    text-align: center; 
+    margin: 0px;
+}
+.slotArea{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.slotArea img{
+    max-height:15vw;
+    align-self: center;
+    height: auto;
+    padding: 25px;
+    background-color: rgb(195, 252, 249);
+    border: rgb(198, 232, 255) 8px solid;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.folklore{
+    display:flex;
+    width: 100vw;
+    justify-content: center;
+    flex-direction: row;
+}
+.folklore button{
+    height: 15vw;
+    width: 15vw;
+    border: rgb(138, 199, 240) 8px solid;
+    background-color: rgb(131, 189, 228);
+    font-size: 20px;
+}
+.folklore input{
+    font-size: 20px;
+    border: rgb(138, 199, 240) 8px solid;
+    background-color: rgb(131, 189, 228);
+}
+#bet{
+    width:33%;
+}
+
+.result{
+    color: rgb(138, 199, 240);
+    width:100%;
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+}
+img:not([src]), img[src=""]{
+    visibility:hidden;
+}
