@@ -1,0 +1,10 @@
+   upgBtn1.addEventListener('mouseenter', function() {
+    upgBtn1.classList.remove('button-hover-remove')
+    upgBtn1.classList.add('button-hover');
+    
+});
+
+upgBtn1.addEventListener('mouseleave', function() {
+    upgBtn1.classList.remove('button-hover')
+    upgBtn1.classList.add('button-hover-remove')
+});

@@ -1,0 +1,774 @@
+/*
+Names: Brayden Scott, Dee Liberman
+Date: Febuary 4 2026
+
+Description: Styling for each element on page, with defined custom animations for
+            image to click, text color change, and button interaction animation.
+*/
+
+/*  -------------------------------- Animations ----------------------------------- */
+
+/*  Bounce animation for clicker when clicked*/
+@keyframes durr-bounce {
+        from {top:-1%;}
+        to {top:-20px;}
+}
+
+@keyframes ach-animation {
+    0% {opacity: 0%;
+        transform: translateY(50%) ;
+        -webkit-transform: translateY(50%) ;
+        -moz-transform: translateY(50%) ;
+        -ms-transform: translateY(50%) ;
+        -o-transform: translateY(50%) ;
+        }
+
+    100% { opacity: 100%;
+          transform: translateY(0%) ;
+          -webkit-transform: translateY(0%) ;
+          -moz-transform: translateY(0%) ;
+          -ms-transform: translateY(0%) ;
+          -o-transform: translateY(0%) ;
+        }
+}
+
+/*  Shrink upgrade buttons for when hovered and clicked */
+@keyframes button {
+    0% {
+
+        }
+
+    100% {
+        transform: scale(0.97);
+        -webkit-transform: scale(0.97);
+        -moz-transform: scale(0.97);
+        -ms-transform: scale(0.97);
+        -o-transform: scale(0.97);
+        }
+}
+
+/* Reverse button size back to original state */
+.button-hover-remove{
+        animation: button reverse 1s;
+        -webkit-animation: button reverse 1s;
+}
+
+/* For any element we want to fade out */
+@keyframes fade-out {
+    0% {
+        opacity: 100%;
+        }
+
+    100% {
+        opacity: 0%;
+        }
+}
+
+/* Rainbow color change for "Click for joy!!!" message only */
+@keyframes colorChange {
+  0% {
+    color: rgb(255, 0, 0); 
+    -webkit-text-stroke-color: red;
+  }
+  25% {
+    color: orange; 
+    -webkit-text-stroke-color: orange;
+  }
+  50% {
+    color: green;
+    -webkit-text-stroke-color: green;
+  }
+  75% {
+    color: blue; 
+    -webkit-text-stroke-color: blue;
+  }
+  100% {
+    color: purple; 
+    -webkit-text-stroke-color: purple;
+  }
+}
+/*  -------------------------------- Element Styling ----------------------------------- */
+
+p {
+    font-size: 150%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-text-stroke: 1.5px;
+    margin-bottom: 0;
+    color: aliceblue;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+/* help button on bottom right to access instructions */
+#help{
+    position: fixed; /* take it out of any stacking context */
+    right: 1%;
+    bottom: 0px;
+    width: 8%;
+    height: 5%;
+    color: rgb(240, 240, 240);
+    font-family: 'Lucida Sans';
+    font-size: 100%;
+    background-color: rgba(42, 39, 63, 0.82);
+    z-index: 998;              /* Higher stack level than everything except div that lowers screen brightness when help button is clicked  */
+    pointer-events: auto;        /* make sure it remains clickable */
+}
+
+/* Instruction window div that holds information and exit button in center of page when opened*/
+.helpBox{
+    position: absolute;
+    left: 30vw;
+    top: 15vh;
+    width: 45%;
+    height: 70%;
+    overflow: hidden;
+    z-index: 999;
+}
+
+/* Image that holds instructions set to exact size of helpBox class */
+#howToBox{
+    width: 100%;
+    height: 100%;
+}
+
+/* User clicks to exit instruction window */
+#exitBox{
+    width: 20%;
+    height: 5%;
+    color: aliceblue;
+    background-color: rgb(12, 35, 56);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 1000; /* In highest stack position to be above instruction window */
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+}
+
+/* Rainbow arrow gif pointing to element you click to gain points */
+#arrow{
+    transform: rotate(270deg); 
+    width: 15%; align-self: center;
+     margin-bottom: 0;
+}
+
+/* Displays how many current points under Joy Score section */
+#clickField{
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 100%;
+}
+
+/* Displays how many current points gained per second */
+#passiveField{
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 100%;
+}
+
+/* Displays how many current clicks gained per second */
+#automaticField{
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 100%;
+}
+
+/* "Click for joy!!!" message under arrow */
+#message{
+    margin: auto;
+    margin-top: 0;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    animation: colorChange 2s ease-in-out 0s infinite alternate forwards;
+    -webkit-animation: colorChange 2s ease-in-out 0s infinite alternate forwards;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Displays current score */
+#scoreField{
+    margin-top: 1%;
+}
+
+/* Holds Score, Achievements, Upgrades sections horizontally */
+.sections{
+    height: 100vh;
+    width: 35vw;
+    background-color: rgb(167, 175, 183);
+    margin: 0.1%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/sun.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-style:outset;
+    border-color: rgb(255, 255, 255);
+    border-width: 1.5px;
+    border-radius: 10%;
+    font-size: 110%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+    overflow: hidden;
+}
+
+/* Parent div holds everything */
+.flex{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+/* Button you click to gain points */
+#button{
+    width: 70%;
+    margin: auto;
+    position: relative;
+}
+
+/* Area for achievement's to show up within middle section*/
+.achievement-area{
+    pointer-events: none;
+    width: 100%;
+    height: 60%;
+    background-color: rgba(31, 238, 169, 0);
+    display: flex;
+    flex-direction: column-reverse; /* Every new achievement appears above the previous, to have old achievement's go to bottom when new one shows up  */
+    margin: auto;
+    margin-top: 0;
+}
+
+/* Header styling for score section */
+.scoreboard{
+    width: 100%;
+    height: 25%;
+    background-color: rgba(22, 24, 92, 0.377);
+    text-align: center;
+    font-size: 150%;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+}
+
+/* Header styling for achievement and upgrade section */
+.header{
+    width: 100%;
+    min-height: 25%;
+    background-color: rgba(22, 24, 92, 0.377);
+    text-align: center;
+    font-size: 150%;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+}
+
+/* Above "achievement-area" where every badge shows up once achievement is obtained */
+.badge-area{
+    padding: 0px 10px;
+    display:grid;
+    height: 20%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    list-style-type:none;
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 0px;
+    margin: auto;
+}
+
+/* Applies padding to each list that holds each image */
+.badge-area li{
+    text-decoration: none;
+    padding: 0px 5px;
+}
+
+/* Applies sizing to each image within the list nested in badge area */
+.badge-area li img{
+    width: 100%;
+    height: 100%;
+    border: black solid 3px;
+    border-radius:20px;
+}
+
+/* Achievement description that pops in and out from bottom of screen when achievement is gained */
+.achievement{
+    margin: auto;
+    margin-top: 0;
+    color: black;
+    background-color: rgba(31, 24, 67, 0.37);
+    width: 80%;
+    display:flex;
+    flex-direction: row;
+    border-radius: 15px;
+    border: rgba(22, 24, 92, 0.377) solid 5px;
+    display: none;
+}
+
+/* area that holds the space where achievement's pop in */
+#popup{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    margin-top: 20%;
+}
+
+/* Applies pop up animation to achievement descriptions when gained that is applied within JavaScript */
+.achievement-popup{
+    animation: ach-animation 1.5s;
+    -webkit-animation: ach-animation 1.5s;
+}
+
+/* Applies fade out to achievement descriptions when gained that is applied within JavaScript */
+.achievement-fade{
+    animation: fade-out 2s;
+    -webkit-animation: fade-out 2s;
+}
+
+/* Applies fade in to achievement descriptions when gained that is applied within JavaScript */
+.achievement-fadein{
+    animation: fade-in 2s;
+    -webkit-animation: fade-in 2s;
+}
+
+/* Organizes elements in achievement descriptions  */
+.achievement div{
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(127, 255, 212, 0);
+    width: 60%;
+    font-size: 85%;
+
+}
+
+/* Organizes text in achievement descriptions */
+.achievement div p{
+    margin-left: 5%;
+    margin-top: 10px;
+    flex:1;
+
+}
+
+/* Changing size of last p element, which is description */
+.achievement div p:last-child{
+    font-size: 100%;
+}
+
+.achievement img{
+    max-width: 10vw;
+    margin-left: auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* Each upgrade clickable button */
+.upgradeButton{
+    text-align: center;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    margin: 5px;
+    display:flex;
+    flex-direction: row;
+    background-color: rgba(22, 24, 92, 0.377);
+    color: rgb(255, 255, 255);
+}
+
+/* Elements within each upgrade button*/
+.upgradeButtonInner{
+    display:flex;
+    flex-direction: column;
+    justify-content: left;
+    pointer-events: none;
+}
+
+.upgradeButtonInner p{
+    margin: 7.5px 7.5px;
+    font-size: calc(1vw + 10px);
+    pointer-events: none;
+    user-select: none;
+    font-size: 130%;
+}
+
+/* Styling for upgrade name/description */
+.upgradeButtonInner:first-child{
+    text-align: left;
+    flex-grow: 2;
+}
+
+/* Styling for upgrade cost/owned */
+.upgradeButtonInner:last-child{
+    text-align: right;
+    flex-grow: 1;
+}
+
+.hide{
+    display:none;
+}
+
+/* Darkens screen when help button is pressed */
+#darken{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.689);
+    position: absolute;
+    z-index: 998;
+    left: 0;
+}
+
+/* Tablet */
+@media (max-width: 1080px){
+
+
+    .header{
+    width: 100%;
+    min-height: 15%;
+    background-color: rgba(22, 24, 92, 0.377);
+    text-align: center;
+    font-size: 90%;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    }
+
+    .scoreboard{
+    width: 100%;
+    height: 15%;
+    background-color: rgba(22, 24, 92, 0.377);
+    text-align: center;
+    font-size: 90%;
+    display: flex;
+    color: aliceblue;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    padding: auto;
+    }
+
+    #button{
+    width: 90%;
+    margin: auto;
+    margin-top: 40%;
+    position: relative;
+    }
+
+    #arrow{
+    transform: rotate(270deg); 
+    width: 30%; align-self: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    }
+
+    #message{
+    margin: auto;
+    margin-top: 0px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    animation: colorChange 2s ease-in-out 0s infinite alternate forwards;
+    -webkit-animation: colorChange 2s ease-in-out 0s infinite alternate forwards;
+    }
+
+    .badge-area{
+    padding: 0px 0px ;
+    display:grid;
+    height: 20%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    list-style-type:none;
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 0px;
+    margin: auto;
+    }
+
+    .badge-area li img{
+    width: 100%;
+    height: 90%;
+    border: rgba(10, 12, 67, 0.637) solid 3px;
+    border-radius:20px;
+    }
+
+    .badge-area li{
+    text-decoration: none;
+    padding: 0px 5px;
+    margin-left: 10%;
+    }
+
+    .achievement{
+    margin: auto;
+    margin-top: 0;
+    color: black;
+    background-color: rgba(31, 24, 67, 0.37);
+    width: 80%;
+    display:flex;
+    flex-direction: row;
+    border-radius: 15px;
+    border: rgba(10, 12, 67, 0.377) solid 5px;
+    display: none;
+    }
+
+    .achievement div{
+    display:flex;
+    flex-direction: column;
+    width: 60%;
+    }
+
+    .achievement div p{
+    margin-left: 5%;
+    margin-top: 10px;
+    flex:1;
+    font-size: 95%;
+    }
+
+    #darken{
+    top: 0;
+    height: 102vh;
+}
+
+}
+
+/* Phone */
+@media (max-width: 480px){
+
+    .flex{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .sections{
+    height: 35vh;
+    width: 100vw;
+    background-color: rgb(167, 175, 183);
+    margin: 0.1%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/sun.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-style:outset;
+    border-color: rgb(255, 255, 255);
+    border-width: 1.5px;
+    border-radius: 10%;
+    font-size: 110%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+    overflow: hidden;
+    }
+
+    .header{
+    width: 100%;
+    min-height: 25%;
+    background-color: rgba(22, 24, 92, 0.377);
+    text-align: center;
+    font-size: 100%;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    }
+
+    .header p{
+    margin-top: 2%;
+    }
+
+    .scoreboard{
+    width: 100%;
+    height: 25%;
+    background-color: rgba(22, 24, 92, 0.377);
+    text-align: center;
+    font-size: 90%;
+    display: flex;
+    color: aliceblue;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    padding: auto;
+    }
+
+    .scoreboard p{
+    margin-top: 0;
+    font-size: 110%;
+    }
+
+    /* Moves and resizes clickable button to gain points to fit in smaller section size */
+    #button{
+    width: 50%;
+    margin: auto;
+    margin-top: 2%;
+    position: relative;
+    }
+
+    /* Moved to left of button */
+    #arrow{
+    transform: rotate(0deg);
+    width: 15%;
+    margin-left: -75%;
+    margin-bottom: 0;
+    margin-top: -50%;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    }
+
+    /* Moved to left of button */
+    #message{
+    margin: auto;
+    font-size: 60%;
+    margin-top: -15%;
+    margin-left: 2.5%;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    animation: colorChange 2s ease-in-out 0s infinite alternate forwards;
+    -webkit-animation: colorChange 2s ease-in-out 0s infinite alternate forwards;
+    }
+
+    .badge-area{
+    padding: 0px 0px ;
+    display:grid;
+    height: 20%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    list-style-type:none;
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 0px;
+    margin: 0;
+    }
+
+    .badge-area li img{
+    width: 50%;
+    height: 90%;
+    border: rgba(10, 12, 67, 0.637) solid 3px;
+    border-radius:20px;
+    }
+
+    .badge-area li{
+    text-decoration: none;
+    padding: 0px 0px;
+    margin-left: 0%;
+    }
+
+    .achievement{
+    margin: auto;
+    margin-top: 0;
+    color: black;
+    background-color: rgba(31, 24, 67, 0.37);
+    width: 80%;
+    display:flex;
+    flex-direction: row;
+    border-radius: 15px;
+    border: rgba(10, 12, 67, 0.377) solid 5px;
+    display: none;
+    }
+
+    .achievement div{
+    display:flex;
+    flex-direction: column;
+    width: 60%;
+    }
+
+    .achievement div p{
+    margin-left: 5%;
+    margin-top: 10px;
+    flex:1;
+    font-size: 95%;
+    }
+
+    .achievement div p:last-child{
+    font-size: 75%;
+    }
+
+    .upgradeButton{
+    text-align: center;
+    font-size: 50%;
+    width: 100%;
+    height: 25%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    margin-bottom: 5px;
+    margin-left: 0;
+    display:flex;
+    flex-direction: row;
+    background-color: rgba(22, 24, 92, 0.377);
+    color: rgb(255, 255, 255);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    }
+
+    .upgradeSection{
+    overflow: scroll;
+    }
+
+    #clickField{
+        font-size: 60% ;
+    }
+
+    #passiveField{
+        font-size: 60% ;
+    }
+
+    #help{
+    position: fixed;
+    right: 1%; /* Moved to top right of screen */
+    top: 1%;
+    width: 15%;
+    height: 3%;
+    color: rgb(240, 240, 240);
+    font-family: 'Lucida Sans';
+    font-size: 100%;
+    background-color: rgba(42, 39, 63, 0.82);
+    pointer-events: auto;
+    }
+
+    .helpBox{
+    position: absolute;
+    left: 12.5vw;
+    top: 40vh;
+    width: 80%;
+    height: 30%;
+    overflow: hidden;
+    }
+
+    #darken{
+    top: 0;
+    height: 103vh;
+    }
+
+    #howToBox{
+    width: 100%;
+    height: 100%;
+    }
+
+    #exitBox{
+    width: 20%;
+    height: 10%;
+    color: aliceblue;
+    background-color: rgb(12, 35, 56);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    }
+
+}

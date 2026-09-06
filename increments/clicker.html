@@ -1,0 +1,251 @@
+<!--
+    Names: Brayden Scott, Dee Liberman
+    Date: Feb 4, 2026
+-->
+<!DOCTYPE html> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="clicker.js"></script>
+    <link rel="stylesheet" href="clicker.css">
+    <title> Jolly Clicker</title>
+</head>
+<body>
+
+    <div class = "flex"> <!--Div container for everything-->
+
+    <div class = "sections"><!--Div container for each section, the gameplay, achievements, and upgrades sections.-->
+
+        <div class = "scoreboard"><!--Contains info for obtaining score, as well as current values-->
+
+            <p>Joy Score</p>
+            <p id="scoreField">number</p>
+            <p id="clickField">+1.0 per click!</p>
+
+        </div>
+
+        <img id = "button" src="images/durr.webp"> <!--The button to be clicked to gain score-->
+
+        <img id = "arrow" src = "images/arrow-gif-png-14.gif"><!--The arrow pointing to the score button-->
+
+        <p id = "message">Click for joy!!!</p>
+    </div>
+
+    <div class = "sections"> <!--Second Section-->
+
+
+        <div class = "header">
+
+            <p>Achievements</p>
+
+        </div>
+
+        <ul class = "badge-area"> <!--Contains all of the badges-->
+            <li class="hide" id="badge1">
+                <img src="images/billionsmustsmile.jpg" >
+            </li>
+            <li class="hide" id="badge2" title="Learn to Lighten Up!">
+                <img src="images/lighten.jpg">
+            </li>
+            <li class="hide" id="badge3" title="Lollipop!">
+                <img src="images/lollipop.jpg">
+            </li>
+            <li class="hide" id="badge4" title="You are a gem among stones, a shining example of dedication and perseverance. Your hard work and determination have paid off, and you are now reaping the rewards of your efforts. May your journey continue to be filled with success and achievement, and may you inspire others to reach for the stars as well. Congratulations on this incredible accomplishment!">
+                <img src="images/gem.jpg">
+            </li>
+            <li class="hide" id="badge5" title="100 Clicks! Morally Superior Chud.">
+                <img src="images/morals.jpg">
+            </li>
+            <li class="hide" id="badge6" title="Smells Like Healing!">
+                <img src="images/flowersniff.jpg">
+            </li>
+            <li class="hide" id="badge7" title="Inner peace.">
+                <img src="images/calm.jpg">
+            </li>
+            <li class="hide" id="badge8" title="Spin For Friendship :)">
+                <img src="images/friends.jpg">
+            </li>
+            <li class="hide" id="badge9" title="500 Clicks! Each Click a Step For Healing!">
+                <img src="images/healing.jpg">
+            </li>
+  
+        </ul>
+        <div class = "achievement-area"> <!--Achievements become visible here when doing their animation-->
+
+            <div id = "popup">
+
+                <div class = "achievement achievement-popup" id = "achievement1"><!--Individual achievement class.-->
+                <div>
+                    <p>Achievement</p>
+                    <p>Billions must smile!</p>
+                </div>
+                <img src="images/billionsmustsmile.jpg">
+                </div>
+
+
+                <div class = "achievement achievement-popup" id = "achievement2">
+                    <div>
+                        <p>Achievement</p>
+                        <p>Lighten Up!</p>
+                    </div>
+                    <img src="images/lighten.jpg">
+                    </div>
+
+                    <div class = "achievement achievement-popup" id = "achievement3">
+                    <div>
+                        <p>Achievement</p>
+                        <p>Lollipop! Take a lick!</p>
+                    </div>
+                    <img src="images/lollipop.jpg">
+                    </div>
+
+                    <div class = "achievement achievement-popup" id = "achievement4">
+                    <div>
+                        <p>Achievement</p>
+                        <p>You are a gem among stones, a shining example of dedication and perseverance. Your kindness has paid off, and you are now reaping the rewards of your efforts. </p>
+                    </div>
+                    <img src="images/gem.jpg">
+                    </div>
+
+                    <div class = "achievement achievement-popup" id = "achievement5">
+                    <div>
+                        <p>Achievement</p>
+                        <p>Morally Superior Chudling
+                        </p>
+                    </div>
+                    <img src="images/morals.jpg">
+                    </div>
+
+                    <div class = "achievement achievement-popup" id = "achievement6">
+                    <div>
+                        <p>Achievement</p>
+                        <p>It's the little things.
+                        </p>
+                    </div>
+                    <img src="images/flowersniff.jpg">
+                    </div>
+
+                    <div class = "achievement achievement-popup" id = "achievement7">
+                    <div>
+                        <p>Achievement</p>
+                        <p>Gained inner peace
+                        </p>
+                    </div>
+                    <img src="images/calm.jpg">
+                    </div>
+
+                    <div class = "achievement achievement-popup" id = "achievement8">
+                    <div>
+                        <p>Achievement</p>
+                        <p>Joyous times ahead my friend!
+                        </p>
+                    </div>
+                    <img src="images/friends.jpg">
+                    </div>
+
+                    <div class = "achievement achievement-popup" id = "achievement9">
+                    <div>
+                        <p>Achievement</p>
+                        <p>Healing
+                        </p>
+                    </div>
+                    <img src="images/healing.jpg">
+                    </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+        <div class = "sections upgradeSection"><!--Third section, contains everything relating to upgrades-->
+
+
+            <div class = "header">
+
+                <p>Upgrades</p>
+                <p></p>
+                <p id="passiveField">+0 per second!</p><!--Shows current effects of passive upgrades-->
+                <p id = "automaticField"> 0 clicks per second!</p>
+
+            </div>
+
+            <div id = "upgrades"><!--Section for containing all 5 upgrade buttons-->
+                <div class = "upgradeButton" id ="upgrade1">
+                    <div class="upgradeButtonInner">
+                        <p>Lollipop</p>
+                        <p>Adds +0.2 per (c)lick.</p>
+                    </div>
+                    <div class="upgradeButtonInner">
+                        <p>Cost : 15</p>
+                        <p>Owned : 0</p>
+
+                    </div>
+                </div>
+                <div class = "upgradeButton" id ="upgrade2">
+                    <div class="upgradeButtonInner">
+                        <p>Give a Compliment</p>
+                        <p>Produces 1 joy per second.</p>
+                    </div>
+                    <div class="upgradeButtonInner">
+                        <p>Cost : 75</p>
+                        <p>Owned : 0</p>
+
+                    </div>
+                </div>
+                <div class = "upgradeButton" id ="upgrade3">
+                    <div class="upgradeButtonInner">
+                        <p>Sniff The Flowers</p>
+                        <p>Adds +2.5 per click.</p>
+                    </div>
+                    <div class="upgradeButtonInner">
+                        <p>Cost : 500</p>
+                        <p>Owned : 0</p>
+
+                    </div>
+                </div>
+                <div class = "upgradeButton" id ="upgrade4">
+                    <div class="upgradeButtonInner">
+                        <p>Meditate</p>
+                        <p>Automatically clicks once per second</p>
+                    </div>
+                    <div class="upgradeButtonInner">
+                        <p>Cost : 1200</p>
+                        <p>Owned : 0</p>
+
+                    </div>
+                </div>
+                <div class = "upgradeButton" id ="upgrade5">
+                    <div class="upgradeButtonInner">
+                        <p>Spin Propeller Hat</p>
+                        <p>Adds +25 per click.</p>
+                    </div>
+                    <div class="upgradeButtonInner">
+                        <p>Cost : 6000</p>
+                        <p>Owned : 0</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <button id = "help">Help</button>
+
+            <div id = "darken"></div><!--Empty div that gets made visible to darken the rest of the screen when accessing help menu-->
+
+            <div id = "helpBoxID" class = "helpBox"> <!-- Appears when user clicks "help" button that holds instructions. Class is for styling nested elements, ID for accessing via JavaScript-->
+
+                <img id = "howToBox" src="images/helpbox.png"> <!--Instruction window-->
+
+                <button id = "exitBox"> <!--Instruction window/screen darkening behind window hides when pressed-->
+                    Exit
+                </button>
+
+            </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
