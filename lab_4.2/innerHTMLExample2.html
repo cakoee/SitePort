@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Simple innerHTML Example</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+    </style>
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded',() => {
+
+            document.getElementById("user_Input").addEventListener('keyup', function(){
+
+            if (event.key == 'Enter' ){
+
+            changeDiv()
+        }
+
+
+        });
+        })
+
+        function changeDiv() {
+
+            let loop = true;
+            let user_Num =0;
+
+
+            while (loop == true){
+
+                if (parseInt(document.getElementById("user_Input").value) <= 0){
+
+                alert("Cannot be a negative number.")
+
+                }
+
+                else{
+
+                    user_Num = parseInt(document.getElementById("user_Input").value);
+                    alert(user_Num)
+                    loop = false;
+                }
+            }
+
+            let count = 1;
+
+            document.getElementById("target").innerHTML =
+                `<p> ${count} </p>`;
+
+            while ( count < user_Num){
+                count ++
+                document.getElementById("target").innerHTML +=
+                `<p> ${count} </p>`;
+            }
+
+        }
+
+
+
+    </script>
+
+
+</head>
+
+    <body>
+
+        <h1>Change Red Box to User Input</h1>
+
+        <div id='target' style="color:red">Here is some text in a div.</div>
+
+        <label>Enter positive integer:</label>
+        <input type="text" id ="user_Input" name ="user_Input">
+
+    </body>
+
+</html>

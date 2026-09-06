@@ -1,0 +1,698 @@
+/*
+Name: Dee Liberman
+Date: March 9
+Description: Visual aspects of the banners for user needs help or dies.
+Also includes different versions for different screen sizes.
+
+*/
+
+@font-face { 
+    font-family: PixelifySans;
+    src: url(PixelifySans-VariableFont_wght.ttf);
+    }
+
+*{
+    font-family: PixelifySans;
+} 
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+/* The galaxy background */
+.box{
+    width: 30vw;
+    height: 100vh;
+    background-color: black;
+    margin: auto;
+    background-image: url("../images/loginBG.png");
+    background-size: 100%;
+}
+
+/* Cloud image on the top of the scnreen */
+.cloudsTop{
+    width: 30vw;
+    height: 30vh;
+    background-color: rgba(127, 255, 212, 0);
+    background-image: url("../images/loginclouds.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 10;
+    position: absolute;
+    top: 1%;
+}
+
+/* Cloud image on the bottom of the scnreen */
+.cloudsBottom{
+    width: 30vw;
+    height: 30vh;
+    background-color: rgba(127, 255, 212, 0);
+    background-image: url("../images/logincloudsBOTTOM.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 10;
+    position: absolute;
+    bottom: -5%;
+}
+
+/*  Styling for each input element */
+input{
+    height: 5vh;
+    width: 18vw;
+}
+
+label{
+    font-size: 100%;
+}
+
+/*Div to hold individual input tags*/
+.userInput{
+    margin: auto;
+
+}
+
+/* Area nested under banner to hold input tags and submit button */
+.inputArea{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../images/loginbanner.png");
+    background-size: 100%;
+    margin: auto;
+    height: 80%;
+    width: 100%;
+    text-align: center;
+}
+
+/*Div to hold akk input tags*/
+.inputBoxes{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 25%;
+    background-color: rgba(245, 245, 220, 0);
+    margin: auto;
+    margin-top: 85%;
+    text-align: center;
+}
+
+/*Button to request log in*/
+#continue{
+    width: 30%;
+    height: 5%;
+    margin: auto;
+    margin-top: 0%;
+    font-size: 100%;
+    background-color: rgb(57, 35, 63);
+    color: rgb(253, 250, 255);
+}
+
+/*Textbox that relays error or welcome message*/
+#message{
+    margin: auto;
+    margin-bottom: 5%;
+    font-size: 200%;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+
+/* For errors to display if input is incorrect */
+#error{
+    margin: auto;
+    margin-top: 0;
+}
+
+button{
+    margin-top: 1%;
+    margin-bottom: 0;
+    width: 30%;
+    height: 20%;
+    font-size: 150%;
+    margin-left: 35%;
+
+}
+
+/*Div to hold welcome message*/
+.welcome{
+    margin: auto;
+    background-color: rgba(18, 165, 82, 0);
+    height: 50%;
+    width: 70%;
+    margin-top: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Start game button*/
+#play{
+    visibility: visible;
+    margin: auto;
+    width: 60%;
+    height: 10%;
+    margin-bottom: 5%;
+    margin-top: 0%;
+    background-color: rgb(57, 35, 63);
+    color: rgb(253, 250, 255);
+}
+
+/*Go back to login as different user*/
+#login{
+    width: 60%;
+    height: 10%;
+    margin: auto;
+    margin-top: 0%;
+    margin-bottom: 15%;
+    background-color: rgb(57, 35, 63);
+    color: rgb(253, 250, 255);
+}
+
+/*Character at bottom of screen*/
+#MC{
+    width: 45%;
+    background-color: rgba(0, 255, 255, 0);
+    height: 20%;
+    background-image: url("../images/mc.png");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    margin-top: 5%;
+    
+}
+
+/*  Desktop */
+@media (max-width:2500px){
+
+.box{
+    width: 30vw;
+    height: 100vh;
+    background-color: black;
+    margin: auto;
+    background-image: url("../images/loginBG.png");
+    background-size: 100%;
+    padding-top: 1%;
+}
+
+.inputArea{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(118, 29, 29, 0);
+    background-image: url("../images/loginbannerPHONE.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 90%;
+    text-align: center;
+}
+
+.cloudsTop{
+    width: 20vw;
+    height: 40vh;
+    background-color: rgba(127, 255, 212, 0);
+    background-image: url("../images/loginclouds.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 10; 
+    position: absolute;
+    top: -5%;
+}
+
+.cloudsBottom{
+    width: 25vw;
+    height: 30vh;
+    background-color: rgba(127, 255, 212, 0);
+    background-image: url("../images/logincloudsBOTTOM.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 10;
+    position: absolute;
+    bottom: -1%;
+    right: 35%;
+}
+
+.inputBoxes{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 25%;
+    background-color: rgba(245, 245, 220, 0);
+    margin: auto;
+    margin-top: 50%;
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 120%;
+}
+
+#email{
+    width: 100%;
+}
+
+#date{
+    width: 100%;
+    
+}
+
+#continue{
+    width: 30%;
+    height: 5%;
+    margin: auto;
+    margin-top: 2%;
+    font-size: 150%;
+    background-color: rgb(57, 35, 63);
+    color: rgb(253, 250, 255);
+}
+
+#message{
+    margin: auto;
+    margin-top: -15%;
+    font-size: 200%;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+
+#MC{
+    width: 45%;
+    background-color: rgba(0, 255, 255, 0);
+    height: 20%;
+    background-image: url("../images/mc.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    margin-top: -2%;
+    margin-left: 5%;
+
+}
+
+#play{
+    visibility: visible;
+    margin: auto;
+    width: 60%;
+    height: 10%;
+    margin-bottom: 5%;
+    margin-top: 0%;
+    background-color: rgb(57, 35, 63);
+    color: rgb(253, 250, 255);
+}
+
+#login{
+    width: 60%;
+    height: 10%;
+    margin: auto;
+    margin-top: 0%;
+    margin-bottom: 45%;
+    background-color: rgb(57, 35, 63);
+    color: rgb(253, 250, 255);
+}
+
+
+}
+
+ /* Smaller Desktop */
+@media (max-width:1600px){
+
+.box{
+    width: 30vw;
+    height: 100vh;
+    background-color: black;
+    margin: auto;
+    background-image: url("../images/loginBG.png");
+    background-size: 100%;
+    padding-top: 1%;
+}
+
+.inputArea{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(118, 29, 29, 0);
+    background-image: url("../images/loginbannerPHONE.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 90%;
+    text-align: center;
+}
+
+.cloudsTop{
+    width: 20vw;
+    height: 40vh;
+    background-color: rgba(127, 255, 212, 0);
+    background-image: url("../images/loginclouds.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 10;
+    position: absolute;
+    top: -5%;
+}
+
+.cloudsBottom{
+    width: 25vw;
+    height: 30vh;
+    background-color: rgba(127, 255, 212, 0);
+    background-image: url("../images/logincloudsBOTTOM.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 10;
+    position: absolute;
+    bottom: -1%;
+    right: 35%;
+}
+
+.inputBoxes{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 25%;
+    background-color: rgba(245, 245, 220, 0);
+    margin: auto;
+    margin-top: 45%;
+    text-align: center;
+    margin-bottom: 0%;
+}
+
+#email{
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+#date{
+    width: 100%;
+    
+}
+
+#continue{
+    width: 30%;
+    height: 5%;
+    margin: auto;
+    margin-top: 25%;
+    font-size: 100%;
+    background-color: rgb(57, 35, 63);
+    color: rgb(253, 250, 255);
+}
+
+#message{
+    margin: auto;
+    margin-top: -15%;
+    font-size: 200%;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+
+#MC{
+    width: 45%;
+    background-color: rgba(0, 255, 255, 0);
+    height: 20%;
+    background-image: url("../images/mc.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    margin-top: -2%;
+    margin-left: 5%;
+
+}
+
+#play{
+    visibility: visible;
+    margin: auto;
+    width: 60%;
+    height: 10%;
+    margin-bottom: 5%;
+    margin-top: 0%;
+    background-color: rgb(57, 35, 63);
+    color: rgb(253, 250, 255);
+}
+
+#login{
+    width: 60%;
+    height: 10%;
+    margin: auto;
+    margin-top: 0%;
+    margin-bottom: 45%;
+    background-color: rgb(57, 35, 63);
+    color: rgb(253, 250, 255);
+}
+
+
+}
+
+ /* Phone */
+@media (max-width:480px){
+
+.box{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    margin: auto;
+    background-image: url("../images/loginBG.png");
+    background-size: 100%;
+    padding-top: 15%;
+}
+
+.inputArea{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(118, 29, 29, 0);
+    background-image: url("../images/loginbannerPHONE.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 100%;
+    text-align: center;
+}
+
+.cloudsTop{
+    width: 100vw;
+    height: 35vh;
+    background-color: rgba(127, 255, 212, 0);
+    background-image: url("../images/loginclouds.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 10;
+    position: absolute;
+    top: -7%;
+}
+
+.cloudsBottom{
+    width: 100vw;
+    height: 30vh;
+    background-color: rgba(127, 255, 212, 0);
+    background-image: url("../images/logincloudsBOTTOM.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 10;
+    right: 0%;
+    position: absolute;
+    bottom: -7%;
+}
+
+.inputBoxes{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 25%;
+    background-color: rgba(245, 245, 220, 0);
+    margin: auto;
+    margin-top: 45%;
+    text-align: center;
+    margin-bottom: 0%;
+}
+
+#email{
+    width: 100%;
+}
+
+#date{
+    width: 100%;
+    
+}
+
+#continue{
+    width: 30%;
+    height: 5%;
+    margin: auto;
+    margin-top: 15%;
+    font-size: 100%;
+    background-color: rgb(57, 35, 63);
+    color: rgb(253, 250, 255);
+}
+
+#message{
+    margin: auto;
+    margin-top: -15%;
+    font-size: 200%;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+
+#MC{
+    width: 45%;
+    background-color: rgba(0, 255, 255, 0);
+    height: 20%;
+    background-image: url("../images/mc.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    margin-top: 1%;
+    margin-left: 5%;
+
+}
+
+#play{
+    visibility: visible;
+    margin: auto;
+    width: 60%;
+    height: 10%;
+    margin-bottom: 5%;
+    margin-top: 0%;
+    background-color: rgb(57, 35, 63);
+    color: rgb(253, 250, 255);
+}
+
+#login{
+    width: 60%;
+    height: 10%;
+    margin: auto;
+    margin-top: 0%;
+    margin-bottom: 45%;
+    background-color: rgb(57, 35, 63);
+    color: rgb(253, 250, 255);
+}
+
+
+}
+
+/* Smaller Phone */
+@media (max-width:403px){
+
+.box{
+    width: 100vw;
+    height: 95vh;
+    background-color: black;
+    margin: auto;
+    margin-bottom: 0%;
+    background-image: url("../images/loginBG.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.inputArea{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(118, 29, 29, 0);
+    background-image: url("../images/loginbannerPHONE.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 65%;
+    width: 100%;
+    text-align: center;
+    margin-top: 20%;
+}
+
+
+.inputBoxes{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 25%;
+    background-color: rgba(245, 245, 220, 0);
+    margin: auto;
+    margin-top: 40%;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.cloudsTop{
+    width: 100vw;
+    height: 35vh;
+    background-color: rgba(127, 255, 212, 0);
+    background-image: url("../images/loginclouds.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 10;
+    position: absolute;
+    top: 0%;
+}
+
+.cloudsBottom{
+    width: 100vw;
+    height: 20%;
+    background-color: rgba(127, 255, 212, 0);
+    background-image: url("../images/logincloudsBOTTOM.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 10;
+    right: 0%;
+    position: absolute;
+    bottom: 0%;
+}
+
+#email{
+    width: 100%;
+}
+
+#date{
+    width: 100%;
+}
+
+#continue{
+    width: 30%;
+    height: 5%;
+    margin: auto;
+    margin-top: 20%;
+    margin-left: 36%;
+    font-size: 100%;
+    background-color: rgb(57, 35, 63);
+    color: rgb(253, 250, 255);
+}
+
+#message{
+    margin: auto;
+    margin-bottom: 10%;
+    font-size: 200%;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 30%;
+    margin-top: -30%;
+    text-align: center;
+}
+
+#MC{
+    width: 45%;
+    background-color: rgba(0, 255, 255, 0);
+    height: 20%;
+    background-image: url("../images/mc.png");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    margin-top: 1%;
+
+
+}
+
+#play{
+    visibility: visible;
+    margin: auto;
+    width: 65%;
+    height: 20%;
+    margin-bottom: 5%;
+    margin-top: 10%;
+    background-color: rgb(57, 35, 63);
+    color: rgb(253, 250, 255);
+}
+
+#login{
+    width: 65%;
+    height: 20%;
+    margin: auto;
+    margin-top: 0%;
+    margin-bottom: 45%;
+    background-color: rgb(57, 35, 63);
+    color: rgb(253, 250, 255);
+}
+
+
+
+}

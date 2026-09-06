@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--
+To be used in exercises. 
+
+NOTE ON ABSOLUTE POSITIONING: When an element has position:absolute, you can place 
+anywhere on the page you want. You can specify a pixel position of the top, left
+corner using the top and left CSS properties. If the element is a child of
+<body> this will position it relative to the top left corner of the page.
+
+If an element with absolute position is inside another element with absolute
+position (as the "moveme" div is below) you specify top and left to move it 
+relative to the top left corner of the containing element. So for this element,
+top: 0px and left: 0px puts it in the top left corner of the "container" div.
+
+-->
+<html>
+    <head>
+        <title>Move Me</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #container {
+                position:absolute;
+                overflow: scroll;
+                top:50px;
+                left:50px;
+                width:500px;
+                height:500px;
+                border: 10px solid black;
+                border-radius: 70px;
+            }
+            #moveme {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100px;
+                height: 100px;
+                background-color: rgb(63, 88, 137);
+                background-image: url("images/houseball.webp");
+                background-size: cover;
+                border-radius:100px;
+                border:5px solid black;
+            }
+
+             #instructions {
+                position:absolute;
+                top:50px;
+                left:40%;
+                width:900px;
+                height:500px;
+            }
+
+        </style>
+
+        <script>
+
+            function randomMove(){
+
+                let w = Math.floor(Math.random() * 499);
+                let h = (Math.floor(Math.random() * 499));
+
+                let move = confirm("Do you want to move the circle?");
+
+                if (move){
+
+                    positionElem = document.getElementById("moveme");
+                    positionElem.style.left = w + 'px';
+                    positionElem.style.top = h + 'px';
+
+                }
+
+                else{}
+
+             }
+
+             function positionMove(){
+
+
+                let loop = true;
+                let step = 20;
+
+                while (loop == true){
+
+                    let move = prompt("Direction of movement? " + "\n"
+                                    + "U for up" + "\n"
+                                    + "D for down" + "\n"
+                                    + "L for left" + "\n"
+                                    + "R for right" + "\n"
+                                    + "Q to quit" + "\n"
+                                    );
+
+                    if (move == "Q" || move == "q"){
+
+                        alert("Quitting.");
+                        loop = false;
+                    }
+
+                    else if (move == "U" || move == "u"){
+
+                        positionElem = document.getElementById("moveme");
+                        let currentTop = parseInt(positionElem.style.top) || 0;
+                        let newTop = currentTop - step;
+                        if (newTop >= 0) {  // Above 0 px will leave bounds upward (negative pixels from top)
+                            positionElem.style.top = newTop + 'px';
+                        }
+
+                    }
+
+                    else if (move == "D" || move == "d"){
+
+                        positionElem = document.getElementById("moveme");
+                        let currentTop = parseInt(positionElem.style.top) || 0;
+                        let newTop = currentTop + step;
+                        if (newTop <= 400) {  // Container is 500px, ball is 100px, so max is 400
+                            positionElem.style.top = newTop + 'px';
+                        }
+
+                    }
+
+                    else if (move == "L" || move == "l"){
+
+                        positionElem = document.getElementById("moveme");
+                        let currentLeft = parseInt(positionElem.style.left) || 0;
+                        let newLeft = currentLeft - step;
+                        if (newLeft >= 0) {  // Negative pixels from 0 will leave out of bounds to the left
+                            positionElem.style.left = newLeft + 'px';
+                        }
+
+                    }
+
+                    else if (move == "R" || move == "r"){
+
+                        positionElem = document.getElementById("moveme");
+                        let currentLeft = parseInt(positionElem.style.left) || 0;
+                        let newLeft = currentLeft + step;
+                        if (newLeft <= 400) {  // Max is 400 (500 - 100)
+                            positionElem.style.left = newLeft + 'px';
+                        }
+
+                    }
+
+                    else {
+
+                        alert("Invalid command.")
+                    }
+
+                    //Variable to track current position
+                    element = document.getElementById('moveme');
+                    positionElem = element.getBoundingClientRect();
+
+                    console.log('X:', positionElem.left);
+                    console.log('Y:', positionElem.top);
+                }
+
+             }
+
+        </script>
+
+    </head>
+
+    <body>
+        <div id="container">
+            <div id='moveme'></div>
+        </div>
+
+        <div id = "instructions">
+
+        <h1>Use function randomMove() in console to move ball to random position.</h1>
+        <h1>Use function positionMove() in console to move ball to custom position.</h1>
+        </div>
+    </body>
+
+</html>

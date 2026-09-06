@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(19, 21, 35);
+}
+
+@font-face {
+            font-family: Qilka;
+            src: url(Qilka.woff2);
+}
+
+*{
+    color: rgb(187, 198, 205);
+    font-family: Qilka;
+}
+
+h1{
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgb(117, 135, 210);
+}
+
+input::placeholder {
+  color: rgb(29, 29, 50);
+}
+
+.input{
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 30vh;
+    text-align: center;
+}
+
+#guessBox{
+
+    width: 50%;
+    height: 50px;
+    margin: auto;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 150%;
+    background-color: rgba(0, 0, 0, 0.815);
+    border: 2px solid rgb(38, 42, 78);
+}
+
+#submit{
+
+    width: 15%;
+    height: 35px;
+    margin: auto;
+    margin-top: 1%; 
+    background-color: rgba(0, 0, 0, 0.815);
+    color:rgb(117, 121, 154);
+    border: 2px solid rgb(38, 42, 78);
+    overflow: hidden;
+}
+

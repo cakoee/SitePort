@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+Finish this program by filling in JavaScript that checks if the user’s answer to
+the addition question is correct, and then display “Correct” or “Incorrect” on the
+web page by changing the innerHTML of the <h1> element.
+
+Sam Scott, McMaster University, 2025
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>addition</title>
+    <script type="text/javascript">
+        function addition() {
+            resultField = document.getElementById("result")
+            resultField.innerHTML = ""
+            let op1 = Math.floor(Math.random() * 200 - 100);
+            let op2 = Math.floor(Math.random() * 200 - 100);
+            document.getElementById("question").innerHTML = "What is " + op1 + " + " + op2 + "?";
+            let correctAnswer = parseInt(op1 + op2);
+            document.getElementById("answer").addEventListener('keyup', function(event){
+                if(Number.isNaN(Number(document.getElementById("answer").value+"0"))){
+                    resultField.classList.add("badInput")
+                    resultField.innerHTML = "Improper Input"
+                    resultField.style.color = 'black'
+                }else{
+                    resultField.classList.remove("badInput")
+                    resultField.innerHTML = ""
+                }
+                if(event.key == 'Enter'){
+                    if(parseInt(document.getElementById("answer").value)==correctAnswer){
+                        resultField.innerHTML = "Correct"
+                        resultField.style.color = 'green'
+                    }
+                    else{
+                        resultField.innerHTML = "Incorrect"
+                        resultField.classList.remove("badInput")
+                        resultField.style.color = 'red'
+
+                    }
+                }
+            })
+        }
+    </script>
+    <style>
+        .badInput{
+            border-width: 20px;
+            border-color: black;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="question">Run addition() from the console to get going.</p>
+    <input type="text" id="answer" name="answer" placeholder="Enter Answer">
+    <h1 id="result"></h1>
+    <div id="test"></div>
+</body>
+
+</html>

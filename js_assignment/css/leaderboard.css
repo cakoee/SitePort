@@ -1,0 +1,282 @@
+ /*
+Name: Dee Liberman
+Date: March 31
+Description: Visual aspects of the leaderboard when game over.
+*/
+
+@font-face { 
+    font-family: PixelifySans;
+    src: url(PixelifySans-VariableFont_wght.ttf);
+    }
+
+*{
+    font-family: PixelifySans;
+}
+
+ body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+ }
+ 
+
+ /* Galaxy background*/
+ .screen{
+    width: 30vw;
+    height: 100vh;
+    background-color: black;
+    margin: auto;
+    background-image: url("../images/galaxy.webp");
+    overflow: hidden;
+ }
+
+ /*Moon image behind main UI*/
+ .darkmoon{
+    width: 100%;
+    height: 90%;
+    background-color: rgba(240, 255, 255, 0);
+    margin-bottom: 0%;
+    margin-top: 0%;
+    background-image: url("../images/darkmoon.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+ }
+ 
+ /*Banner to hold global leaderboard data*/
+ .leaderboard{
+    margin-bottom: 0%;
+    margin-top: 0%;
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    background-color: rgba(255, 228, 196, 0);
+    background-repeat: no-repeat;
+    background-image: url("../images/leaderboard.webp");
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+
+ }
+
+ /*Area for buttons to log out or return to main menu of game*/
+ .footer{
+    background-image: url("../images/clouds.png");
+    margin-bottom: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 10%;
+    background-color: rgba(10, 201, 201, 0);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0%;
+
+ }
+
+ /*Places where buttons in footers position*/
+ .button{
+    width: 25%;
+    height: 70%;
+    margin-bottom: 2%;
+    margin-left: 17%;
+ }
+
+ /*Table of the global leaderboard*/
+ #table{
+    margin: auto;
+    background-color: rgba(139, 20, 199, 0.322);
+    font-size: 115%;
+    margin-top: 35%;
+    width: 55%;
+    outline: 3.2px solid rgb(227, 162, 249);
+    outline-offset: -3px;
+
+ }
+
+ /*Titles of columns in global table*/
+ #title{
+   width: 20%;
+   background-color: rgb(227, 162, 249);
+   font-size: 80%;
+ }
+
+ /* Title of current user stats for the table*/
+ #title1{
+   width: 5%;
+   background-color: rgba(127, 255, 212, 0);
+ }
+
+ /*Empty column title to let rows fall under each column after*/
+ #title1EMPTY{
+   width: 0%;
+   background-color: rgba(127, 255, 212, 0);
+ }
+
+ /*Users table for the column of level*/
+ #title1Level{
+   width: 5%;
+   background-color: rgba(127, 255, 212, 0);
+   
+ }
+
+ /*Users table for the column of high score*/
+ #title1HighScore{
+   width: 10%;
+   background-color: rgba(127, 255, 212, 0);
+   
+ }
+
+ /*Users table for the column of average score*/
+ #title1AvgScore{
+   width: 10%;
+   background-color: rgba(127, 255, 212, 0);
+   
+ }
+
+ /* Empty column for global table*/
+ #emptytitle{
+   width: 10%;
+   background-color: rgb(227, 162, 249);
+ }
+
+ /*Entire table for the current users game data*/
+ #usertable{
+   margin: auto;
+   background-color: rgba(240, 248, 255, 0);
+   width: 80%;
+   margin-top: 35%;
+   margin-left: 10%;
+   font-size: 85%;
+   -webkit-text-stroke: 0.5px;
+   -webkit-text-stroke-color: black;
+ }
+
+ /*Users table rows*/
+  #usertable td{
+   background-color: rgba(40, 3, 52, 0);
+   text-align: center;
+ }
+
+ /*Title of the users table*/
+ caption{
+   font-size: 150%;
+   margin-left: 0%;
+   margin-bottom: 1%;
+   -webkit-text-stroke: 2px;
+   -webkit-text-stroke-color: black;
+ }
+
+ /*Global table styling for the titles of each column*/
+ #table th{
+background-color: rgb(227, 162, 249);
+font-size: 80%;
+ }
+
+  /*Global table styling for rows*/
+ #table td{
+background-color: rgb(227, 162, 249);
+text-align: center;
+ font-size: 90%;
+ }
+
+
+ /* Phone */
+@media (max-width:480px){
+
+     .screen{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    margin: auto;
+    background-image: url("../images/galaxy.webp");
+    overflow: hidden;
+ }
+
+ #usertable{
+   margin: auto;
+   background-color: rgba(240, 248, 255, 0);
+   width: 90%;
+   margin-top: 30%;
+   margin-left: -1.5%;
+   font-size: 85%;
+   -webkit-text-stroke: 0.5px;
+   -webkit-text-stroke-color: black;
+ }
+
+ .leaderboard{
+    margin-bottom: 0%;
+    margin-top: 1%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 228, 196, 0);
+    background-repeat: no-repeat;
+    background-image: url("../images/leaderboard.webp");
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+
+ }
+
+ .button{
+    width: 25%;
+    height: 70%;
+    margin-bottom: 1%;
+    margin-left: 17%;
+ }
+
+
+
+}
+
+/* Smaller Phone */
+@media (max-width:403px){
+
+   .screen{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    margin: auto;
+    background-image: url("../images/galaxy.webp");
+    overflow: hidden;
+ }
+
+ #usertable{
+   margin: auto;
+   background-color: rgba(240, 248, 255, 0);
+   width: 90%;
+   margin-top: 10%;
+   margin-left: -13%;
+   font-size: 85%;
+   -webkit-text-stroke: 0.5px;
+   -webkit-text-stroke-color: black;
+ }
+
+ caption{
+   font-size: 150%;
+   margin-left: 40%;
+   margin-bottom: 1%;
+   -webkit-text-stroke: 2px;
+   -webkit-text-stroke-color: black;
+ }
+
+ .leaderboard{
+    margin-bottom: 0%;
+    margin-top: 15%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 228, 196, 0);
+    background-repeat: no-repeat;
+    background-image: url("../images/leaderboard.webp");
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+
+ }
+
+
+}
+
+
+

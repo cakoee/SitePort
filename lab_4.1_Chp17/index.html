@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> Exercise 3-4</title>
+</head>
+
+
+<body>
+
+    <script>
+
+
+        // Defining ball options
+
+        let balls = []
+
+        let score = 0;
+
+        let loop = 0;
+
+        // Create 100 balls with random colors and points
+        while (loop < 100){
+
+            let points = Math.floor(Math.random() * 100);
+
+            let color_options = ["Red", "White"];
+            let either = Math.floor(Math.random() * 2);
+            let color = color_options[either];
+
+            ball = {color: color, points: points};
+
+            balls.push(ball); //add current ball to array of balls
+
+            loop ++;
+
+        }
+
+
+        let past_chosen = []
+
+        let choose_and_play = true;
+
+        //Loop of choosing ball and getting points
+
+        while (choose_and_play == true){
+
+             //User chooses ball
+
+             let user_num;
+             let choose_loop = true;
+
+            loop: while (choose_loop == true){
+
+                user_num = parseInt(prompt("Enter a number to choose a ball out of 0-99:"))
+
+                if (user_num > 99 || user_num < 0){
+
+                    alert("Cannot be less than 0 or greater than 99.");
+                    continue loop;
+                }
+
+                if (past_chosen.includes(user_num)){
+
+                    alert("You have already chosen this ball. Please choose a new one.");
+                    continue loop;
+                }
+
+                else{
+
+                    past_chosen.push(user_num)
+                    choose_loop = false; //Enter game loop
+                }
+
+            }
+
+        //Game starts
+
+            let game = true;
+
+            while (game == true){
+
+
+                let current_ball = balls[user_num];
+
+                if (current_ball.color == "Red"){
+
+                    score = score - current_ball.points;
+
+                    alert("Ball Information: " + "\n"
+                    + "Color: " + current_ball.color + "\n"
+                    + "Points deducted: " + current_ball.points + "\n"
+                    + "Your points: " + score
+                    )
+
+                    alert("Red ball chosen. Game over." + "\n"
+                        + "Final points: " + score
+                    )
+
+                    game = false; //exit game loop
+                    choose_and_play = false; //exit game all together
+                }
+
+                if (current_ball.color == "White"){
+
+                    let x = confirm("Ball Information: " + "\n"
+                    + "Color: " + current_ball.color + "\n"
+                    + "Points added: " + current_ball.points + "\n"
+                    + "Your points: " + (score + current_ball.points) + "\n" + "\n"
+                    + "Keep playing?"
+                    );
+
+                    if (x){ //If they hit confirm
+                        score = score + current_ball.points;
+                        game = false; //Exit game and re enter choose loop for another number
+                    }
+
+                    else{ //If they hit cancel
+
+                        score = score + current_ball.points;
+
+                        alert(" Game over." + "\n"
+                        + "Final points: " + score
+                        )
+
+                        choose_and_play = false; //exit game all together
+                        game = false;
+                    }
+                }
+
+            }
+
+            continue; //Go back to ask for another ball
+
+        }
+
+    </script>
+
+</body>
+
+</html>

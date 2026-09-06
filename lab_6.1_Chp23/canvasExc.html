@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab 6.1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <style type="text/css">
+        #Canvas {
+            background-color: silver;
+            margin: 30px;
+        }
+        body {
+            text-align: center;
+            color:rgb(237, 212, 233);
+            background-color: rgb(95, 84, 112);
+        }
+    </style>
+    <script>
+
+        //House position
+         house_x = 10
+         y = 170
+
+         //Car position
+         car_x = house_x
+         car_y = 240
+         window_x =  42.5
+
+        window.addEventListener("load", function () {
+
+        //Add space
+        document.getElementById("Button1").addEventListener("click", function(){
+
+            //Add space for house
+            house_x = house_x + 65
+
+            //Add space for car
+            car_x = house_x
+            window_x = window_x + 65
+
+        })
+
+           //Add House
+           document.getElementById("Button2").addEventListener("click", function(){
+
+                if (house_x <= 340){
+                    const c = document.getElementById("Canvas");
+                    const ctx = c.getContext("2d");
+                    ctx.beginPath();
+                    ctx.moveTo(house_x - 10, y )
+                    ctx.lineTo(house_x + 25, y - 25);
+                    ctx.lineTo(house_x + 60, y );
+
+                    ctx.closePath();
+                    ctx.fillStyle = "rgb(247, 212, 242)";
+                    ctx.fill();
+                    ctx.strokeStyle = "white";
+                    ctx.lineWidth = 2;
+                    ctx.stroke();
+
+                    ctx.fillStyle = "rgb(247, 212, 242)";
+                    ctx.fillRect(house_x, y, 50, 50);
+                    ctx.strokeStyle = "white";
+                    ctx.lineWidth = 2;
+                    ctx.strokeRect(house_x, y, 50, 50);
+                    house_x = house_x + 65 //Change (x,y) position for next element
+                    car_x = house_x - 65
+                    window_x = house_x - 33
+                }
+            })
+
+           //Add Car
+           document.getElementById("Button3").addEventListener("click", function(){
+
+                if (car_x <= 340){
+
+                    const c = document.getElementById("Canvas");
+                    const ctx = c.getContext("2d");
+
+                    ctx.fillStyle = "white";
+                    ctx.fillRect(car_x, car_y, 45, 25);
+                    ctx.fillRect(car_x + 45, car_y + 10, 8, 15);
+
+
+                    //Car windows
+                    ctx.fillStyle = "rgb(162, 171, 175)";
+                    ctx.fillRect(window_x, 242.5, 10, 8);
+                    ctx.fillRect(window_x - 20, 242.5, 12, 8);
+
+                    //Back wheel
+                    ctx.beginPath();
+                    ctx.moveTo(car_x + 5, car_y + 25)
+                    ctx.lineTo(car_x + 7.5, car_y + 20.5)
+                    ctx.lineTo(car_x + 10, car_y + 20);
+                    ctx.lineTo(car_x + 12.5, car_y + 19);
+                    ctx.lineTo(car_x + 15, car_y + 20);
+                    ctx.lineTo(car_x + 17.5, car_y + 20.5)
+                    ctx.lineTo(car_x + 20, car_y + 25);
+
+                    ctx.lineTo(car_x + 17.5, car_y + 29)
+                    ctx.lineTo(car_x + 15, car_y + 30);
+                    ctx.lineTo(car_x + 12.5, car_y + 31);
+                    ctx.lineTo(car_x + 10, car_y + 30);
+                    ctx.lineTo(car_x + 7.5, car_y + 29)
+
+                    ctx.closePath();
+                    ctx.fillStyle = "black";
+                    ctx.fill();
+
+                    //Front wheel
+                    ctx.beginPath();
+                    ctx.moveTo(car_x + 30, car_y + 25)
+                    ctx.lineTo(car_x + 32.5, car_y + 20.5)
+                    ctx.lineTo(car_x + 35, car_y + 20);
+                    ctx.lineTo(car_x + 37.5, car_y + 19);
+                    ctx.lineTo(car_x + 40, car_y + 20);
+                    ctx.lineTo(car_x + 42.5, car_y + 20.5)
+                    ctx.lineTo(car_x + 45, car_y + 25);
+
+                    ctx.lineTo(car_x + 42.5, car_y + 29)
+                    ctx.lineTo(car_x + 40, car_y + 30);
+                    ctx.lineTo(car_x + 37.5, car_y + 31);
+                    ctx.lineTo(car_x + 35, car_y + 30);
+                    ctx.lineTo(car_x + 32.5, car_y + 29)
+
+                    ctx.closePath();
+                    ctx.fillStyle = "black";
+                    ctx.fill();
+
+                }
+             })
+
+           //Add Star
+           document.getElementById("Button4").addEventListener("click", function(){
+
+                //Random color
+                let star_color = Math.floor(Math.random() * 3)
+
+                //Random position
+                star_x = Math.floor(Math.random() * 400)
+                star_y =  Math.floor(Math.random() * 100)
+
+                if (star_color == 0){
+
+
+                        const c = document.getElementById("Canvas");
+                        const ctx = c.getContext("2d");
+
+                        //Top of star
+                        ctx.beginPath();
+                        ctx.moveTo(star_x , star_y )
+                        ctx.lineTo(star_x + 2.5, star_y - 5)
+                        ctx.lineTo(star_x + 5, star_y )
+
+                        ctx.closePath();
+                        ctx.fillStyle = "rgb(182, 221, 255)";
+                        ctx.fill();
+
+                        //Right of star
+                        ctx.beginPath();
+                        ctx.moveTo(star_x + 5 , star_y  )
+                        ctx.lineTo(star_x + 5, star_y + 5)
+                        ctx.lineTo(star_x + 10, star_y + 2 )
+
+                        ctx.closePath();
+                        ctx.fillStyle = "rgb(182, 221, 255)";
+                        ctx.fill();
+
+                        //Left of star
+                        ctx.beginPath();
+                        ctx.moveTo(star_x  , star_y  )
+                        ctx.lineTo(star_x , star_y + 5)
+                        ctx.lineTo(star_x - 5, star_y + 2 )
+
+                        ctx.closePath();
+                        ctx.fillStyle = "rgb(182, 221, 255)";
+                        ctx.fill();
+
+                        //Bottom left of star
+                        ctx.beginPath();
+                        ctx.moveTo(star_x -1 , star_y + 5)
+                        ctx.lineTo(star_x -1.5, star_y + 10)
+                        ctx.lineTo(star_x + 6, star_y + 5 )
+
+                        ctx.closePath();
+                        ctx.fillStyle = "rgb(182, 221, 255)";
+                        ctx.fill();
+
+                        //Bottom right of star
+                        ctx.beginPath();
+                        ctx.moveTo(star_x, star_y + 5)
+                        ctx.lineTo(star_x +7, star_y + 10)
+                        ctx.lineTo(star_x + 6, star_y + 5 )
+
+                        ctx.closePath();
+                        ctx.fillStyle = "rgb(182, 221, 255)";
+                        ctx.fill();
+
+                        //Middle of star
+                        ctx.fillStyle = "rgb(182, 221, 255)";
+                        ctx.fillRect(star_x, star_y, 5, 5);
+                }
+
+                if (star_color == 1){
+
+
+                        const c = document.getElementById("Canvas");
+                    const ctx = c.getContext("2d");
+
+                        //Top of star
+                        ctx.beginPath();
+                        ctx.moveTo(star_x , star_y )
+                        ctx.lineTo(star_x + 2.5, star_y - 5)
+                        ctx.lineTo(star_x + 5, star_y )
+
+                        ctx.closePath();
+                        ctx.fillStyle = "rgb(225, 205, 255)";
+                        ctx.fill();
+
+                        //Right of star
+                        ctx.beginPath();
+                        ctx.moveTo(star_x + 5 , star_y  )
+                        ctx.lineTo(star_x + 5, star_y + 5)
+                        ctx.lineTo(star_x + 10, star_y + 2 )
+
+                        ctx.closePath();
+                        ctx.fillStyle = "rgb(225, 205, 255)";
+                        ctx.fill();
+
+                        //Left of star
+                        ctx.beginPath();
+                        ctx.moveTo(star_x  , star_y  )
+                        ctx.lineTo(star_x , star_y + 5)
+                        ctx.lineTo(star_x - 5, star_y + 2 )
+
+                        ctx.closePath();
+                        ctx.fillStyle = "rgb(225, 205, 255)";
+                        ctx.fill();
+
+                        //Bottom left of star
+                        ctx.beginPath();
+                        ctx.moveTo(star_x -1 , star_y + 5)
+                        ctx.lineTo(star_x -1.5, star_y + 10)
+                        ctx.lineTo(star_x + 6, star_y + 5 )
+
+                        ctx.closePath();
+                        ctx.fillStyle = "rgb(225, 205, 255)";
+                        ctx.fill();
+
+                        //Bottom right of star
+                        ctx.beginPath();
+                        ctx.moveTo(star_x, star_y + 5)
+                        ctx.lineTo(star_x +7, star_y + 10)
+                        ctx.lineTo(star_x + 6, star_y + 5 )
+
+                        ctx.closePath();
+                        ctx.fillStyle = "rgb(225, 205, 255)";
+                        ctx.fill();
+
+                        //Middle of star
+                        ctx.fillStyle = "rgb(225, 205, 255)";
+                        ctx.fillRect(star_x, star_y, 5, 5);
+                }
+
+                if (star_color == 2){
+
+
+                    const c = document.getElementById("Canvas");
+                const ctx = c.getContext("2d");
+
+                    //Top of star
+                    ctx.beginPath();
+                    ctx.moveTo(star_x , star_y )
+                    ctx.lineTo(star_x + 2.5, star_y - 5)
+                    ctx.lineTo(star_x + 5, star_y )
+
+                    ctx.closePath();
+                    ctx.fillStyle = "rgb(251, 217, 243)";
+                    ctx.fill();
+
+                    //Right of star
+                    ctx.beginPath();
+                    ctx.moveTo(star_x + 5 , star_y  )
+                    ctx.lineTo(star_x + 5, star_y + 5)
+                    ctx.lineTo(star_x + 10, star_y + 2 )
+
+                    ctx.closePath();
+                    ctx.fillStyle = "rgb(251, 217, 243)";
+                    ctx.fill();
+
+                     //Left of star
+                    ctx.beginPath();
+                    ctx.moveTo(star_x  , star_y  )
+                    ctx.lineTo(star_x , star_y + 5)
+                    ctx.lineTo(star_x - 5, star_y + 2 )
+
+                    ctx.closePath();
+                    ctx.fillStyle = "rgb(251, 217, 243)";
+                    ctx.fill();
+
+                    //Bottom left of star
+                    ctx.beginPath();
+                    ctx.moveTo(star_x -1 , star_y + 5)
+                    ctx.lineTo(star_x -1.5, star_y + 10)
+                    ctx.lineTo(star_x + 6, star_y + 5 )
+
+                    ctx.closePath();
+                    ctx.fillStyle = "rgb(251, 217, 243)";
+                    ctx.fill();
+
+                    //Bottom right of star
+                    ctx.beginPath();
+                    ctx.moveTo(star_x, star_y + 5)
+                    ctx.lineTo(star_x +7, star_y + 10)
+                    ctx.lineTo(star_x + 6, star_y + 5 )
+
+                    ctx.closePath();
+                    ctx.fillStyle = "rgb(251, 217, 243)";
+                    ctx.fill();
+
+                    //Middle of star
+                    ctx.fillStyle = "rgb(251, 217, 243)";
+                    ctx.fillRect(star_x, star_y, 5, 5);
+             }
+
+             })
+
+
+            });
+
+    </script>
+</head>
+
+<body>
+    <h1> Lab 6.1 Item Spawner </h1>
+    <canvas id="Canvas" width="400" height="400"></canvas>
+    <br>
+    <input type="button" value="Add Space" id = "Button1">
+    <input type="button" value="Add House" id = "Button2">
+    <input type="button" value="Add Car" id = "Button3">
+    <input type="button" value="Add Star" id = "Button4">
+</body>
+
+</html>
